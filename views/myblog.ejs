@@ -1,0 +1,53 @@
+<style>
+    body, html {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .login {
+        background-color: antiquewhite;
+        width: 60%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    input {
+        margin-bottom: 10px;
+        padding: 10px;
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+</style>
+<%- include("partials/header.ejs") %>
+
+<div class="login">
+    <h1>Log in</h1>
+    <form action="submit" method="POST">
+        <input type="email" name="email" id="username" placeholder="Email" required>
+        <input type="password" name="pass" id="pass" placeholder="Password" required>
+        <input type="submit" value="Login">
+    </form>
+    
+</div>
+<%- include("partials/footer.ejs") %>
